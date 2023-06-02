@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87453d7c4f521e4bb7031863f29cf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 9
-  _height: 16
+  _width: 20
+  _height: 12
   _tilePrefab: {fileID: 2070116450}
   _cam: {fileID: 519420032}
 --- !u!1 &2070116449 stripped
