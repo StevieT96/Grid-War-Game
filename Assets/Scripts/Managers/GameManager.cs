@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
                 HandleSelectPlayer();
                 break;
             case GameState.GenerateGrid:
+                GridManager.instance.GenerateGrid();
                 break;
             case GameState.SpawnUnitsP1:
                 break;

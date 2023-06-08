@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MountainTIle
       objectReference: {fileID: 0}
+    - target: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.49056602
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49056602
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.49056602
+      objectReference: {fileID: 0}
     - target: {fileID: 4679985029926925119, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -79,8 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d20830812d48b46b06533709a854dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseColor: {r: 0.41509432, g: 0.40782177, b: 0.38964042, a: 1}
-  _offsetColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   _renderer: {fileID: 935447012501755429}
   _highlight: {fileID: 5619714016160182477}
 --- !u!1 &5619714016160182477 stripped
