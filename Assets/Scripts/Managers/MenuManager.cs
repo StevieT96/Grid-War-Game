@@ -1,23 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _playerSelectPanel;
-    [SerializeField] private TextMeshProUGUI _stateText;
-    private void Awake()
+    public static MenuManager instance;
+    [SerializeField] private GameObject _selectedUnitFaction1Object, _tileObject, _tileUnitObject;
+
+    void Awake()
     {
-        GameManager.OnGameStateChanged += GameManagerOnOnGameStateChanged;
+        instance = this;
     }
-    void OnDestroy()
+
+    public void ShowTileInfo(Tile tile)
     {
-        GameManager.OnGameStateChanged -= GameManagerOnOnGameStateChanged;
+        if (tile == null)
+        {
+            _tileObject.SetActive(false);
+            _tileUnitObject.SetActive(false);
+            return;
+        }
+
+        _tileObject.GetComponentInChildren<Text>().text = tile.TileName;
+        _tileObject.SetActive(true);
+
+        if (tile.OccupiedUnit)
+        {
+            _tileUnitObject.GetComponentInChildren<Text>().text = tile.OccupiedUnit.UnitName;
+            _tileUnitObject.SetActive(true);
+        }
     }
-    private void GameManagerOnOnGameStateChanged(GameState State)
+    public void ShowSelectedUnit(BaseUnit unit)
     {
-        _playerSelectPanel.SetActive(State == GameState.SelectPlayer);
+        if(unit == null)
+        {
+            _selectedUnitFaction1Object.SetActive(false);
+            return;
+        }
+        
+        _selectedUnitFaction1Object.GetComponentInChildren<Text>().text = unit.UnitName;
+        _selectedUnitFaction1Object.SetActive(true);
     }
 }

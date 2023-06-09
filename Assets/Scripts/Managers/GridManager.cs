@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class GridManager : MonoBehaviour
     public static GridManager instance;
     [SerializeField] private int _width, _height;
 
-    [SerializeField] private Tile _GrassTile, _MountainTile;
+    [SerializeField] private Tile _grassTile, _mountainTile;
 
     [SerializeField] private Transform _cam;
 
@@ -27,30 +28,36 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < _height; y++)
             {
-                var randomTile = Random.Range(0, 6) == 3 ? _MountainTile : _GrassTile;
+                var randomTile = Random.Range(0, 6) == 3 ? _mountainTile : _grassTile;
                 var spawnedTile = Instantiate(randomTile, new Vector3(x, y), Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
 
 
                 spawnedTile.Init(x, y);
 
+
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
+
         _cam.transform.position = new Vector3((float)_width / 2 - 0.5f, (float)_height / 2 - 0.5f, -10);
 
-        GameManager.instance.ChangeState(GameState.SpawnUnitsP1);
+        GameManager.instance.ChangeState(GameState.SpawnFaction1);
     }
 
-    public Tile GetUnitFaction1SpawnTile()
+    public Tile GetFaction1SpawnTile()
     {
-        return _tiles.Where(t => t.Key.x < _width / 2).OrderBy(t => Random.value).First().Value;
+        return _tiles.Where(t => t.Key.x < _width / 2 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
     }
+
+    public Tile GetFaction2SpawnTile()
+    {
+        return _tiles.Where(t => t.Key.x > _width / 2 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
+    }
+
     public Tile GetTileAtPosition(Vector2 pos)
     {
         if (_tiles.TryGetValue(pos, out var tile)) return tile;
-        {
-            return null;
-        }
+        return null;
     }
 }

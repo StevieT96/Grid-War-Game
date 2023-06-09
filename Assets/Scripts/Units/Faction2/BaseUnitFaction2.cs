@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitFaction1 : BaseUnitFaction1
+public class BaseUnitFaction2 : BaseUnit
 {
 
 }

@@ -79,10 +79,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8348821cedbca4c98fe8c662868a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseColor: {r: 0.01201493, g: 0.46500686, b: 0.8490566, a: 1}
-  _offsetColor: {r: 0.18382876, g: 0.40808836, b: 0.764151, a: 1}
+  TileName: Water
   _renderer: {fileID: 9219890524947761808}
   _highlight: {fileID: 4536810998209490040}
+  _isWalkable: 0
+  OccupiedUnit: {fileID: 0}
 --- !u!212 &9219890524947761808 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}

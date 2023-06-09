@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4679985029926925119, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -74,10 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16462c6b05c206144ae2186b84251211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseColor: {r: 0.29709756, g: 0.6981132, b: 0.19428623, a: 1}
-  _offsetColor: {r: 0.27233902, g: 0.6415094, b: 0.08775366, a: 1}
+  TileName: Grass
   _renderer: {fileID: 2485179386707316243}
   _highlight: {fileID: 7168461193706531067}
+  _isWalkable: 1
+  OccupiedUnit: {fileID: 0}
+  _baseColor: {r: 0.29709756, g: 0.6981132, b: 0.19428623, a: 1}
+  _offsetColor: {r: 0.27233902, g: 0.6415094, b: 0.08775366, a: 1}
 --- !u!212 &2485179386707316243 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3914472299663139933, guid: eeb88a11b3b0c9743ab83fb60853ea5b, type: 3}
