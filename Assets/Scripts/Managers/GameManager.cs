@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     {
         ChangeState(GameState.GenerateGrid);
     }
-
+    //will add multiplayer components to the game manager over the week
     public void ChangeState(GameState newState)
     {
         GameState = newState;

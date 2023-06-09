@@ -20,7 +20,7 @@ public class GridManager : MonoBehaviour
     {
         instance = this;
     }
-
+    //walkables not working, maybe a minor modification to the unit manager or tile script?
     public void GenerateGrid()
     {
         _tiles = new Dictionary<Vector2, Tile>();
