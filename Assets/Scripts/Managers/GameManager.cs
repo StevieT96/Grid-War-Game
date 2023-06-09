@@ -9,13 +9,15 @@ public class GameManager : MonoBehaviour
 
     public GameState State;
 
-    public static event Action<GameState> OnGameStateChanged;
-
     void Awake()
     {
         instance = this;
     }
-    public void UpdateGameState(GameState newState)
+    void Start()
+    {
+        ChangeState(GameState.GenerateGrid);
+    }
+    public void ChangeState(GameState newState)
     {
         State = newState;
         switch (newState)
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
                 GridManager.instance.GenerateGrid();
                 break;
             case GameState.SpawnUnitsP1:
+                UnitManager.instance.SpawnUnitFaction1();
                 break;
             case GameState.SpawnUnitsP2:
                 break;
@@ -41,7 +44,7 @@ public class GameManager : MonoBehaviour
                 default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
-        OnGameStateChanged?.Invoke(newState);
+    
     }
     private void HandleSelectPlayer()
     {
@@ -51,12 +54,12 @@ public class GameManager : MonoBehaviour
 
 public enum GameState
 {
-    SelectPlayer,
-    GenerateGrid,
-    SpawnUnitsP1,
-    SpawnUnitsP2,
-    Player1Turn,
-        Player2Turn,
+    SelectPlayer = 0,
+    GenerateGrid = 1,
+    SpawnUnitsP1 = 2,
+    SpawnUnitsP2 = 3,
+    Player1Turn = 4,
+        Player2Turn = 5,
         Player1Victory,
         Player2Victory,
        
