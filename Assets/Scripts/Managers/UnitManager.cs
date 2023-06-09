@@ -21,7 +21,7 @@ public class UnitManager : MonoBehaviour
 
     public void SpawnFaction1()
     {
-        var Faction1Count = 3;
+        var Faction1Count = 4;
 
         for (int i = 0; i < Faction1Count; i++)
         {
@@ -37,7 +37,7 @@ public class UnitManager : MonoBehaviour
 
     public void SpawnFaction2()
     {
-        var Faction2Count = 5;
+        var Faction2Count = 8;
 
         for (int i = 0; i < Faction2Count; i++)
         {
