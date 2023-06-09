@@ -21,7 +21,7 @@ public class UnitManager : MonoBehaviour
 
     public void SpawnFaction1()
     {
-        var Faction1Count = 1;
+        var Faction1Count = 3;
 
         for (int i = 0; i < Faction1Count; i++)
         {
@@ -37,7 +37,7 @@ public class UnitManager : MonoBehaviour
 
     public void SpawnFaction2()
     {
-        var Faction2Count = 2;
+        var Faction2Count = 5;
 
         for (int i = 0; i < Faction2Count; i++)
         {
@@ -59,6 +59,6 @@ public class UnitManager : MonoBehaviour
     public void SetSelectedUnitFaction1(BaseUnitFaction1 unitFaction1)
     {
         SelectedUnitFaction1 = unitFaction1;
-        MenuManager.instance.ShowSelectedUnit(unitFaction1);
+        MenuManager.instance.ShowSelectedUnitFaction1(unitFaction1);
     }
 }

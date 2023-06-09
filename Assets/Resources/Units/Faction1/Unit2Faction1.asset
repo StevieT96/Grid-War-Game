@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62a76d8a34bed99408044b405bdbf82c, type: 3}
-  m_Name: UnitFaction2
+  m_Name: Unit2Faction1
   m_EditorClassIdentifier: 
-  Faction: 1
-  UnitPrefab: {fileID: 2229233274942514147, guid: 16467f651a250e3419f2bc79058431d8, type: 3}
+  Faction: 0
+  UnitPrefab: {fileID: 8399118666719035539, guid: f3c8ce62ae247fc488a331af2585f49d, type: 3}

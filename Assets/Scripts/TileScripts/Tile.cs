@@ -41,7 +41,7 @@ public abstract class Tile : MonoBehaviour
             {
                 if (UnitManager.instance.SelectedUnitFaction1 != null)
                 {
-                    var Faction2 = (BaseUnitFaction2)OccupiedUnit;
+                    var Faction2 = (BaseUnitFaction2) OccupiedUnit;
                     Destroy(Faction2.gameObject);
                     UnitManager.instance.SetSelectedUnitFaction1(null);
                 }

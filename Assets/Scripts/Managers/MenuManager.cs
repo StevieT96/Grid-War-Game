@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour
             _tileUnitObject.SetActive(true);
         }
     }
-    public void ShowSelectedUnit(BaseUnit unit)
+    public void ShowSelectedUnitFaction1(BaseUnitFaction1 unit)
     {
         if(unit == null)
         {
