@@ -98,5 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Spearman
+  Faction: 0
+  highlight: {fileID: 0}
+  path: {fileID: 0}
   OccupiedTile: {fileID: 0}
-  faction: 0
+  currentHP: 0
+  maxHP: 10
+  MoveRange: 3
+  attackRange: 1
+  damage: 5
+  turnDone: 0

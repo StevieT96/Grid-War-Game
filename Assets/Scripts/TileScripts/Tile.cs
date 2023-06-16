@@ -36,7 +36,7 @@ public abstract class Tile : MonoBehaviour
 
         if (OccupiedUnit != null)
         {
-            if (OccupiedUnit.faction == Faction.Faction1) UnitManager.instance.SetSelectedUnitFaction1((BaseUnitFaction1)OccupiedUnit);
+            if (OccupiedUnit.Faction == Faction.Faction1) UnitManager.instance.SetSelectedUnitFaction1((BaseUnitFaction1)OccupiedUnit);
             else
             {
                 if (UnitManager.instance.SelectedUnitFaction1 != null)
@@ -64,5 +64,11 @@ public abstract class Tile : MonoBehaviour
         unit.transform.position = transform.position;
         OccupiedUnit = unit;
         unit.OccupiedTile = this;
+
+    }
+    public void CleanUnit(BaseUnit unit)
+    {
+        unit.OccupiedTile = null;
+        OccupiedUnit = null;
     }
 }

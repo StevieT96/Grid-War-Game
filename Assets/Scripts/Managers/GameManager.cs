@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.PlayerTurn:
                 break;
-            case GameState.EnemiesTurn:
+            case GameState.Player2Turn:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -48,5 +48,5 @@ public enum GameState
     SpawnFaction1 = 1,
     SpawnFaction2 = 2,
     PlayerTurn = 3,
-    EnemiesTurn = 4
+    Player2Turn = 4
 }

@@ -98,5 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitName: Archer
+  Faction: 0
+  highlight: {fileID: 0}
+  path: {fileID: 0}
   OccupiedTile: {fileID: 0}
-  faction: 0
+  currentHP: 0
+  maxHP: 5
+  MoveRange: 2
+  attackRange: 3
+  damage: 2
+  turnDone: 0

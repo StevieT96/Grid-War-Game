@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
     [SerializeField] private GameObject _selectedUnitFaction1Object, _tileObject, _tileUnitObject;
-
+    [SerializeField] private GameObject _tileUnitPanel, _tileUnitName, _tileUnitHP, _tileUnitDamage, _tileUnitMoveRange;
     void Awake()
     {
         instance = this;
@@ -28,6 +28,9 @@ public class MenuManager : MonoBehaviour
         if (tile.OccupiedUnit)
         {
             _tileUnitObject.GetComponentInChildren<Text>().text = tile.OccupiedUnit.UnitName;
+            _tileUnitHP.GetComponentInChildren<Text>().text = tile.OccupiedUnit.currentHP.ToString();
+            _tileUnitDamage.GetComponentInChildren<Text>().text = tile.OccupiedUnit.damage.ToString();
+            _tileUnitMoveRange.GetComponentInChildren<Text>().text = tile.OccupiedUnit.MoveRange.ToString();
             _tileUnitObject.SetActive(true);
         }
     }
@@ -40,6 +43,7 @@ public class MenuManager : MonoBehaviour
         }
         
         _selectedUnitFaction1Object.GetComponentInChildren<Text>().text = unit.UnitName;
+        _selectedUnitFaction1Object.GetComponentInChildren<Text>().text = unit.currentHP.ToString();
         _selectedUnitFaction1Object.SetActive(true);
     }
 }

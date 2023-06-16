@@ -8,6 +8,10 @@ public class ScriptableUnit : ScriptableObject
 {
     public Faction Faction;
     public BaseUnit UnitPrefab;
+    public int maxHP = 20;
+    public int MoveRange;
+    public int attackRange;
+    public int damage = 5;
 
 }
 public enum Faction
