@@ -95,6 +95,7 @@ MonoBehaviour:
   _renderer: {fileID: 935447012501755429}
   _highlight: {fileID: 5619714016160182477}
   _isWalkable: 0
+  rangeHighlight: {fileID: 0}
   OccupiedUnit: {fileID: 0}
 --- !u!1 &5619714016160182477 stripped
 GameObject:

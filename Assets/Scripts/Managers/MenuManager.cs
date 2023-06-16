@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
-    [SerializeField] private GameObject _selectedUnitFaction1Object, _tileObject, _tileUnitObject;
+    [SerializeField] private GameObject _selectedPlayerObject, _tileObject, _tileUnitObject;
     [SerializeField] private GameObject _tileUnitPanel, _tileUnitName, _tileUnitHP, _tileUnitDamage, _tileUnitMoveRange;
     void Awake()
     {
@@ -38,12 +38,12 @@ public class MenuManager : MonoBehaviour
     {
         if(unit == null)
         {
-            _selectedUnitFaction1Object.SetActive(false);
+            _selectedPlayerObject.SetActive(false);
             return;
         }
         
-        _selectedUnitFaction1Object.GetComponentInChildren<Text>().text = unit.UnitName;
-        _selectedUnitFaction1Object.GetComponentInChildren<Text>().text = unit.currentHP.ToString();
-        _selectedUnitFaction1Object.SetActive(true);
+        _selectedPlayerObject.GetComponentInChildren<Text>().text = unit.UnitName;
+        _selectedPlayerObject.GetComponentInChildren<Text>().text = unit.currentHP.ToString();
+        _selectedPlayerObject.SetActive(true);
     }
 }

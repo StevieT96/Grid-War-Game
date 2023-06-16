@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4152174330541874401}
   - component: {fileID: 8775754302953374777}
   m_Layer: 0
-  m_Name: Healer
+  m_Name: Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed842c25e19012546bd60d9886ee69a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Healer
+  UnitName: Mage
   Faction: 0
   highlight: {fileID: 0}
   path: {fileID: 0}
@@ -105,6 +105,6 @@ MonoBehaviour:
   currentHP: 0
   maxHP: 5
   MoveRange: 3
-  attackRange: 1
-  damage: 1
+  attackRange: 2
+  damage: 5
   turnDone: 0

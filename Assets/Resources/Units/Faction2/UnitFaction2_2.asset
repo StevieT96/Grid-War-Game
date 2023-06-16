@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Faction: 1
   UnitPrefab: {fileID: 2229233274942514147, guid: 16467f651a250e3419f2bc79058431d8, type: 3}
+  maxHP: 20
+  MoveRange: 3
+  attackRange: 1
+  damage: 5
