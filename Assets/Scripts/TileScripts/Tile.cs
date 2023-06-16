@@ -7,12 +7,17 @@ public abstract class Tile : MonoBehaviour
     public string TileName;
     [SerializeField] protected SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
-    [SerializeField] private bool _isWalkable;
+    public bool _isWalkable;
     public GameObject rangeHighlight;
 
     public BaseUnit OccupiedUnit;
     public bool Walkable => _isWalkable && OccupiedUnit == null;
+    public bool inRange = false;
 
+
+    [HideInInspector]public bool ischeck = false;
+    public Tile parent = null;
+    public int dist = -1;
 
     public virtual void Init(int x, int y)
     {

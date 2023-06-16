@@ -83,6 +83,7 @@ MonoBehaviour:
   _renderer: {fileID: 9219890524947761808}
   _highlight: {fileID: 4536810998209490040}
   _isWalkable: 0
+  rangeHighlight: {fileID: 0}
   OccupiedUnit: {fileID: 0}
 --- !u!212 &9219890524947761808 stripped
 SpriteRenderer:

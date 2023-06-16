@@ -31,6 +31,7 @@ public class MenuManager : MonoBehaviour
             _tileUnitHP.GetComponentInChildren<Text>().text = tile.OccupiedUnit.currentHP.ToString();
             _tileUnitDamage.GetComponentInChildren<Text>().text = tile.OccupiedUnit.damage.ToString();
             _tileUnitMoveRange.GetComponentInChildren<Text>().text = tile.OccupiedUnit.MoveRange.ToString();
+
             _tileUnitObject.SetActive(true);
         }
     }

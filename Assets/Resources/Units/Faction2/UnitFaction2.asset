@@ -17,4 +17,4 @@ MonoBehaviour:
   maxHP: 20
   MoveRange: 3
   attackRange: 2
-  damage: 1
+  damage: 5
